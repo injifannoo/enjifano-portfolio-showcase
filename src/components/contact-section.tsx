@@ -33,12 +33,21 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Create mailto link with form data
+    const subject = encodeURIComponent(formData.subject);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
+    );
+    
+    // Open email client with pre-filled data
+    window.location.href = `mailto:injifanotu@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Show toast and reset form
     setTimeout(() => {
       setIsSubmitting(false);
       toast({
         title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
+        description: "Email client opened with your message. Thanks for reaching out!",
       });
       
       setFormData({
@@ -47,7 +56,7 @@ export function ContactSection() {
         subject: "",
         message: "",
       });
-    }, 1500);
+    }, 1000);
   };
 
   return (
@@ -148,7 +157,7 @@ export function ContactSection() {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      hello@enjifano.com
+                      injifanotu@gmail.com
                     </p>
                   </div>
                 </div>

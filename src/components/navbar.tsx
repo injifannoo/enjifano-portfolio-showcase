@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,18 +31,32 @@ export function Navbar() {
   };
 
   const handleNavClick = (e, sectionId) => {
-    // Only handle scroll behavior on the home page
+    e.preventDefault();
+    
+    // If we're already on the home page, just scroll to the section
     if (location.pathname === '/') {
-      e.preventDefault();
-      
       const targetElement = document.getElementById(sectionId);
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop - 70, // Adjust for header height
+          top: targetElement.offsetTop - 70,
           behavior: "smooth",
         });
         setIsMenuOpen(false);
       }
+    } else {
+      // If we're on another page, navigate to home page first, then scroll
+      navigate('/');
+      // Use setTimeout to ensure the navigation completes before scrolling
+      setTimeout(() => {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
+      setIsMenuOpen(false);
     }
   };
 
@@ -64,28 +79,35 @@ export function Navbar() {
       }`}
     >
       <div className="container px-4 mx-auto flex items-center justify-between">
-        <Link to="/" className="text-2xl font-bold text-primary">
+        <a 
+          href="/"
+          onClick={(e) => handleNavClick(e, "home")} 
+          className="text-2xl font-bold text-primary"
+        >
           Enjifano
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link
+            <a
               key={item.name}
-              to={item.path}
+              href={`#${item.section}`}
               className="nav-link text-sm font-medium"
               onClick={(e) => handleNavClick(e, item.section)}
             >
               {item.name}
-            </Link>
+            </a>
           ))}
           <ThemeToggle />
-          <Link to="/contact">
+          <a 
+            href="#contact"
+            onClick={(e) => handleNavClick(e, "contact")}
+          >
             <Button className="btn-shine" size="sm">
               Hire Me
             </Button>
-          </Link>
+          </a>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -111,9 +133,9 @@ export function Navbar() {
         <div className="container mx-auto py-4 px-6">
           <div className="flex flex-col space-y-4">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
-                to={item.path}
+                href={`#${item.section}`}
                 className="nav-link text-base font-medium py-2"
                 onClick={(e) => {
                   handleNavClick(e, item.section);
@@ -121,13 +143,19 @@ export function Navbar() {
                 }}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
-            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            <a 
+              href="#contact" 
+              onClick={(e) => {
+                handleNavClick(e, "contact");
+                setIsMenuOpen(false);
+              }}
+            >
               <Button className="w-full btn-shine" size="sm">
                 Hire Me
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

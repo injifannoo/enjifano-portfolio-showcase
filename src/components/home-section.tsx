@@ -1,16 +1,17 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export function HomeSection() {
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    
     // Only handle scroll behavior on the home page
     if (location.pathname === '/') {
-      e.preventDefault();
-      
       const targetElement = document.getElementById(sectionId);
       if (targetElement) {
         window.scrollTo({
@@ -18,6 +19,19 @@ export function HomeSection() {
           behavior: "smooth",
         });
       }
+    } else {
+      // If we're on another page, navigate to home page first, then scroll
+      navigate('/');
+      // Use setTimeout to ensure the navigation completes before scrolling
+      setTimeout(() => {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+      }, 100);
     }
   };
 
@@ -45,63 +59,44 @@ export function HomeSection() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            {location.pathname === '/' ? (
-              <a href="#projects" onClick={(e) => handleScrollToSection(e, "projects")}>
-                <Button className="btn-shine" size="lg">
-                  View My Work
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </a>
-            ) : (
-              <Link to="/projects">
-                <Button className="btn-shine" size="lg">
-                  View My Work
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            )}
+            <a href="#projects" onClick={(e) => handleScrollToSection(e, "projects")}>
+              <Button className="btn-shine" size="lg">
+                View My Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
             
-            {location.pathname === '/' ? (
-              <a href="#contact" onClick={(e) => handleScrollToSection(e, "contact")}>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Contact Me
-                </Button>
-              </a>
-            ) : (
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  Contact Me
-                </Button>
-              </Link>
-            )}
+            <a href="#contact" onClick={(e) => handleScrollToSection(e, "contact")}>
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                Contact Me
+              </Button>
+            </a>
           </div>
         </div>
       </div>
       
-      {location.pathname === '/' && (
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <a 
-            href="#about" 
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
-            onClick={(e) => handleScrollToSection(e, "about")}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a 
+          href="#about" 
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white"
+          onClick={(e) => handleScrollToSection(e, "about")}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </a>
-        </div>
-      )}
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
+      </div>
     </section>
   );
 }
