@@ -29,13 +29,13 @@ export function Navbar() {
   };
 
   const navItems = [
-    { name: "Home", path: "#home" },
-    { name: "About", path: "#about" },
-    { name: "Projects", path: "#projects" },
-    { name: "Services", path: "#services" },
-    { name: "Testimonials", path: "#testimonials" },
-    { name: "Blog", path: "#blog" },
-    { name: "Contact", path: "#contact" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Services", path: "/services" },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -54,18 +54,20 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.name}
-              href={item.path}
+              to={item.path}
               className="nav-link text-sm font-medium"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
           <ThemeToggle />
-          <Button className="btn-shine" size="sm">
-            Hire Me
-          </Button>
+          <Link to="/contact">
+            <Button className="btn-shine" size="sm">
+              Hire Me
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -91,18 +93,20 @@ export function Navbar() {
         <div className="container mx-auto py-4 px-6">
           <div className="flex flex-col space-y-4">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.path}
+                to={item.path}
                 className="nav-link text-base font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
-            <Button className="w-full btn-shine" size="sm">
-              Hire Me
-            </Button>
+            <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Button className="w-full btn-shine" size="sm">
+                Hire Me
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

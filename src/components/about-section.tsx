@@ -13,6 +13,11 @@ export function AboutSection() {
     { name: "DevOps", level: 75 },
   ];
 
+  const handleDownloadCV = () => {
+    // In a real scenario, this would point to an actual PDF file
+    alert("CV download functionality would be implemented here with an actual PDF file");
+  };
+
   return (
     <section id="about" className="section-padding bg-white dark:bg-gray-950">
       <div className="container mx-auto">
@@ -90,7 +95,7 @@ export function AboutSection() {
               ))}
             </div>
 
-            <Button className="btn-shine">
+            <Button className="btn-shine" onClick={handleDownloadCV}>
               <Download className="mr-2 h-4 w-4" /> Download CV
             </Button>
           </div>

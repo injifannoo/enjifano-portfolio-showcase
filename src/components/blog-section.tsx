@@ -10,6 +10,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 export function BlogSection() {
   const blogPosts = [
@@ -96,10 +97,12 @@ export function BlogSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button className="group" variant="outline">
-            <span>Read More Articles</span>
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/blog">
+            <Button className="group" variant="outline">
+              <span>Read More Articles</span>
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function HomeSection() {
   return (
@@ -27,20 +28,24 @@ export function HomeSection() {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <Button className="btn-shine" size="lg">
-              View My Work
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <Link to="/projects">
+              <Button className="btn-shine" size="lg">
+                View My Work
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
             
-            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Contact Me
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                Contact Me
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <a href="#about" className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white">
+        <Link to="/about" className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-6 w-6"
@@ -55,7 +60,7 @@ export function HomeSection() {
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </section>
   );
