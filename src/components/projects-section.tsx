@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export function ProjectsSection() {
   const projects = [
@@ -20,8 +21,8 @@ export function ProjectsSection() {
         "A full-featured e-commerce mobile application with product catalog, shopping cart, payment integration, and order tracking.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       technologies: ["Flutter", "Firebase", "Stripe API"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/ecommerce-app",
+      liveUrl: "https://ecommerce-app-demo.netlify.app",
     },
     {
       id: 2,
@@ -30,8 +31,8 @@ export function ProjectsSection() {
         "A modern and responsive portfolio website built with React and Tailwind CSS, featuring animations and dark mode.",
       image: "https://images.unsplash.com/photo-1481887328591-3e277530862e",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/portfolio",
+      liveUrl: "https://enjifano.netlify.app",
     },
     {
       id: 3,
@@ -40,8 +41,8 @@ export function ProjectsSection() {
         "A comprehensive task management web application with task assignment, progress tracking, and reporting features.",
       image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
       technologies: ["React", "Node.js", "MySQL", "Chart.js"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/task-manager",
+      liveUrl: "https://task-manager-demo.netlify.app",
     },
     {
       id: 4,
@@ -50,8 +51,8 @@ export function ProjectsSection() {
         "A social media platform with user profiles, posts, comments, and real-time chat functionality.",
       image: "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
       technologies: ["Flutter", "Node.js", "MongoDB", "Socket.io"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/social-app",
+      liveUrl: "https://social-app-demo.netlify.app",
     },
     {
       id: 5,
@@ -60,8 +61,8 @@ export function ProjectsSection() {
         "A mobile application for tracking health metrics, workout routines, and nutrition with data visualization.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
       technologies: ["Flutter", "Firebase", "HealthKit API"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/fitness-tracker",
+      liveUrl: "https://fitness-tracker-demo.netlify.app",
     },
     {
       id: 6,
@@ -70,8 +71,8 @@ export function ProjectsSection() {
         "An online reservation system for restaurants with table management, customer profiles, and email notifications.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       technologies: ["React", "Express.js", "MySQL", "Twilio API"],
-      githubUrl: "#",
-      liveUrl: "#",
+      githubUrl: "https://github.com/enjifano/restaurant-booking",
+      liveUrl: "https://restaurant-booking-demo.netlify.app",
     },
   ];
 
@@ -126,9 +127,11 @@ export function ProjectsSection() {
         </div>
 
         <div className="text-center mt-12">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-            View All Projects
-          </Button>
+          <Link to="/projects">
+            <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              View All Projects
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

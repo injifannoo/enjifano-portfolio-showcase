@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,14 +29,30 @@ export function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const handleNavClick = (e, sectionId) => {
+    // Only handle scroll behavior on the home page
+    if (location.pathname === '/') {
+      e.preventDefault();
+      
+      const targetElement = document.getElementById(sectionId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 70, // Adjust for header height
+          behavior: "smooth",
+        });
+        setIsMenuOpen(false);
+      }
+    }
+  };
+
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Services", path: "/services" },
-    { name: "Testimonials", path: "/testimonials" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "/", section: "home" },
+    { name: "About", path: "/about", section: "about" },
+    { name: "Projects", path: "/projects", section: "projects" },
+    { name: "Services", path: "/services", section: "services" },
+    { name: "Testimonials", path: "/testimonials", section: "testimonials" },
+    { name: "Blog", path: "/blog", section: "blog" },
+    { name: "Contact", path: "/contact", section: "contact" },
   ];
 
   return (
@@ -58,6 +75,7 @@ export function Navbar() {
               key={item.name}
               to={item.path}
               className="nav-link text-sm font-medium"
+              onClick={(e) => handleNavClick(e, item.section)}
             >
               {item.name}
             </Link>
@@ -97,7 +115,10 @@ export function Navbar() {
                 key={item.name}
                 to={item.path}
                 className="nav-link text-base font-medium py-2"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, item.section);
+                  setIsMenuOpen(false);
+                }}
               >
                 {item.name}
               </Link>
