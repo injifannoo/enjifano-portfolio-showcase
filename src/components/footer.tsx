@@ -126,7 +126,7 @@ export function Footer() {
             &copy; {year} Enjifano Tamiru. All rights reserved.
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
-            Designed & Developed with ❤️
+            Designed & Developed with Injifanno Tamiru
           </p>
         </div>
       </div>
