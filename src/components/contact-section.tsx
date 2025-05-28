@@ -39,7 +39,8 @@ export function ContactSection() {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`
     );
     
-    // Open email client with pre-filled data
+    // Open email client with pre-filled data 
+    // This is not working in all browsers, but works in most
     window.location.href = `mailto:injifanotu@gmail.com?subject=${subject}&body=${body}`;
     
     // Show toast and reset form
