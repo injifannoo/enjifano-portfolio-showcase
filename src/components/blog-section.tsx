@@ -138,37 +138,40 @@ export function BlogSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post) => (
-            <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
+            <Card key={post.id} className="overflow-hidden flex flex-col h-full hover:shadow-xl transition-all duration-300 group border-0 shadow-lg">
+              <div className="h-48 overflow-hidden relative">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
-              <CardHeader>
-                <div className="flex flex-wrap gap-2 mb-2">
+              <CardHeader className="pb-3">
+                <div className="flex flex-wrap gap-2 mb-3">
                   {post.categories.map((category) => (
-                    <Badge key={category} variant="secondary">
+                    <Badge key={category} variant="secondary" className="text-xs px-2 py-1 bg-primary/10 text-primary border-primary/20">
                       {category}
                     </Badge>
                   ))}
                 </div>
-                <CardTitle className="hover:text-primary transition-colors">
+                <CardTitle className="hover:text-primary transition-colors line-clamp-2 text-lg font-semibold">
                   <Link to={`/blog/${post.id}`}>{post.title}</Link>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="flex-1">
-                <CardDescription>{post.excerpt}</CardDescription>
+              <CardContent className="flex-1 pt-0">
+                <CardDescription className="text-gray-600 dark:text-gray-400 line-clamp-3">{post.excerpt}</CardDescription>
               </CardContent>
-              <CardFooter className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
-                <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-1" />
-                  <span>{post.date}</span>
-                </div>
-                <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>{post.readTime}</span>
+              <CardFooter className="flex justify-between items-center pt-4 border-t border-gray-100 dark:border-gray-800">
+                <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">
+                  <div className="flex items-center mr-4">
+                    <Calendar className="h-4 w-4 mr-1.5 text-primary" />
+                    <span className="font-medium">{post.date}</span>
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="h-4 w-4 mr-1.5 text-primary" />
+                    <span className="font-medium">{post.readTime}</span>
+                  </div>
                 </div>
               </CardFooter>
             </Card>
@@ -177,7 +180,7 @@ export function BlogSection() {
 
         <div className="text-center mt-12">
           <Link to="/blog">
-            <Button className="group" variant="outline">
+            <Button className="group bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300" size="lg">
               <span>Read More Articles</span>
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>

@@ -148,34 +148,40 @@ export function ContactSection() {
           </div>
 
           <div className="space-y-6">
-            <Card>
-              <CardContent className="p-6 flex flex-col space-y-4">
-                <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <Card className="overflow-hidden">
+              <CardContent className="p-6 flex flex-col space-y-6">
+                <h3 className="text-xl font-semibold mb-2">Contact Information</h3>
                 
-                <div className="flex items-start">
-                  <Mail className="text-primary mr-4 mt-1" />
+                <div className="flex items-start group">
+                  <div className="p-3 bg-primary/10 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                    <Mail className="text-primary h-5 w-5" />
+                  </div>
                   <div>
-                    <h4 className="font-medium">Email</h4>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <h4 className="font-medium text-gray-900 dark:text-gray-100">Email</h4>
+                    <p className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
                       injifanotu@gmail.com
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <Phone className="text-primary mr-4 mt-1" />
+                <div className="flex items-start group">
+                  <div className="p-3 bg-primary/10 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                    <Phone className="text-primary h-5 w-5" />
+                  </div>
                   <div>
-                    <h4 className="font-medium">Phone</h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      +251 91 234 5678
+                    <h4 className="font-medium text-gray-900 dark:text-gray-100">Phone</h4>
+                    <p className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                      +251 96 240 8198
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex items-start">
-                  <MapPin className="text-primary mr-4 mt-1" />
+                <div className="flex items-start group">
+                  <div className="p-3 bg-primary/10 rounded-lg mr-4 group-hover:bg-primary/20 transition-colors">
+                    <MapPin className="text-primary h-5 w-5" />
+                  </div>
                   <div>
-                    <h4 className="font-medium">Location</h4>
+                    <h4 className="font-medium text-gray-900 dark:text-gray-100">Location</h4>
                     <p className="text-gray-600 dark:text-gray-400">
                       Addis Ababa, Ethiopia
                     </p>
@@ -184,7 +190,7 @@ export function ContactSection() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <iframe
                   title="Map"

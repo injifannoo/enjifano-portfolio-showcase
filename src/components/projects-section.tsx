@@ -16,6 +16,36 @@ export function ProjectsSection() {
   const projects = [
     {
       id: 1,
+      title: "Health Care App",
+      description:
+        "A comprehensive healthcare platform with authentication, appointment booking, doctor profiles, content creation for patients and doctors, and real-time chat functionality.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
+      technologies: ["Flutter", "Firebase", "Node.js", "Socket.io"],
+      githubUrl: "https://github.com/enjifano/healthcare-app",
+      liveUrl: "https://healthcare-app-demo.netlify.app",
+    },
+    {
+      id: 2,
+      title: "Pet Care App - Casablanca",
+      description:
+        "A mobile application from Casablanca, Morocco focused on pet care with enhanced UI, backend API integration, user authentication, and real-time notifications.",
+      image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1",
+      technologies: ["Flutter", "REST API", "Firebase", "Push Notifications"],
+      githubUrl: "https://github.com/enjifano/petcare-app",
+      liveUrl: "https://petcare-casablanca-demo.netlify.app",
+    },
+    {
+      id: 3,
+      title: "Raba Technologies Website",
+      description:
+        "Official website for Raba Technologies featuring modern design, responsive layout, and comprehensive company portfolio showcase.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      githubUrl: "https://github.com/enjifano/raba-technologies",
+      liveUrl: "https://www.rabatechnologies.com",
+    },
+    {
+      id: 4,
       title: "E-Commerce Mobile App",
       description:
         "A full-featured e-commerce mobile application with product catalog, shopping cart, payment integration, and order tracking.",
@@ -25,7 +55,7 @@ export function ProjectsSection() {
       liveUrl: "https://ecommerce-app-demo.netlify.app",
     },
     {
-      id: 2,
+      id: 5,
       title: "Portfolio Website",
       description:
         "A modern and responsive portfolio website built with React and Tailwind CSS, featuring animations and dark mode.",
@@ -35,7 +65,7 @@ export function ProjectsSection() {
       liveUrl: "https://enjifano.netlify.app",
     },
     {
-      id: 3,
+      id: 6,
       title: "Task Management Dashboard",
       description:
         "A comprehensive task management web application with task assignment, progress tracking, and reporting features.",
@@ -45,7 +75,7 @@ export function ProjectsSection() {
       liveUrl: "https://task-manager-demo.netlify.app",
     },
     {
-      id: 4,
+      id: 7,
       title: "Social Media App",
       description:
         "A social media platform with user profiles, posts, comments, and real-time chat functionality.",
@@ -55,7 +85,7 @@ export function ProjectsSection() {
       liveUrl: "https://social-app-demo.netlify.app",
     },
     {
-      id: 5,
+      id: 8,
       title: "Health & Fitness Tracker",
       description:
         "A mobile application for tracking health metrics, workout routines, and nutrition with data visualization.",
@@ -65,7 +95,7 @@ export function ProjectsSection() {
       liveUrl: "https://fitness-tracker-demo.netlify.app",
     },
     {
-      id: 6,
+      id: 9,
       title: "Restaurant Booking System",
       description:
         "An online reservation system for restaurants with table management, customer profiles, and email notifications.",
@@ -83,7 +113,7 @@ export function ProjectsSection() {
           <h2 className="text-3xl font-bold mb-2">My Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some of the projects I've worked on. Each project was a unique challenge that helped me grow as a developer.
+            Here are some of the 10+ projects I've worked on. Each project was a unique challenge that helped me grow as a developer.
           </p>
         </div>
 
