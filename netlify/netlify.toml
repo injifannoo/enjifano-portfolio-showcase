@@ -1,0 +1,28 @@
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+directory = "netlify/functions"
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase\\dist"
+publishOrigin = "ui"
+commandOrigin = "ui"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

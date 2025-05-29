@@ -86,7 +86,7 @@ export function ProjectsSection() {
     },
     {
       id: 8,
-      title: "Health & Fitness Tracker",
+      title: "Health and Fitness Tracker",
       description:
         "A mobile application for tracking health metrics, workout routines, and nutrition with data visualization.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
