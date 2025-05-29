@@ -7,7 +7,7 @@ redirects = []
 [functions."*"]
 
 [build]
-base = "enjifano-portfolio-showcase"
+base = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase"
 publish = "dist"
 command = "npm run build"
 publishOrigin = "ui"
