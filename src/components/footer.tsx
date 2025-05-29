@@ -19,7 +19,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4 mt-6">
               <a
-                href="https://github.com"
+                href="https://github.com/injifannoo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors"
@@ -28,7 +28,7 @@ export function Footer() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/injifanotamiru"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-primary dark:hover:text-primary transition-colors"
@@ -108,7 +108,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-gray-600 dark:text-gray-400">
-                Email: hello@enjifano.com
+                Email: injifanotu@gmail.com
               </li>
               <li className="text-gray-600 dark:text-gray-400">
                 Location: Addis Ababa, Ethiopia
@@ -126,7 +126,7 @@ export function Footer() {
             &copy; {year} Enjifano Tamiru. All rights reserved.
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
-            Designed & Developed with Injifanno Tamiru
+            Developed with Injifanno Tamiru
           </p>
         </div>
       </div>
