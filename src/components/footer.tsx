@@ -111,6 +111,9 @@ export function Footer() {
                 Email: injifanotu@gmail.com
               </li>
               <li className="text-gray-600 dark:text-gray-400">
+                Phone: +251962408198
+              </li>
+              <li className="text-gray-600 dark:text-gray-400">
                 Location: Addis Ababa, Ethiopia
               </li>
             </ul>
