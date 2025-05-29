@@ -32,7 +32,7 @@ export function Navbar() {
 
   const handleNavClick = (e, sectionId) => {
     e.preventDefault();
-    
+
     // If we're already on the home page, just scroll to the section
     if (location.pathname === '/') {
       const targetElement = document.getElementById(sectionId);
@@ -72,20 +72,25 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
           ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="container px-4 mx-auto flex items-center justify-between">
-        <a 
+        <a
           href="/"
-          onClick={(e) => handleNavClick(e, "home")} 
-          className="text-2xl font-bold text-primary"
+          onClick={(e) => handleNavClick(e, "home")}
+          className="flex items-center space-x-2"
         >
-          Enjifano
+          <img
+            className="h-10 w-auto"  // Adjust height and let width scale automatically
+            src="/images/itub.JPG"
+            alt="Enjifano"
+          />
+          <span className="text-2xl font-bold text-primary">Enjifano</span> {/* Optional if you want name next to logo */}
         </a>
+
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
@@ -100,7 +105,7 @@ export function Navbar() {
             </a>
           ))}
           <ThemeToggle />
-          <a 
+          <a
             href="#contact"
             onClick={(e) => handleNavClick(e, "contact")}
           >
@@ -126,9 +131,8 @@ export function Navbar() {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`fixed inset-x-0 top-[57px] bg-white dark:bg-gray-900 shadow-lg transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? "transform translate-y-0" : "transform -translate-y-full"
-        } md:hidden`}
+        className={`fixed inset-x-0 top-[57px] bg-white dark:bg-gray-900 shadow-lg transition-transform duration-300 ease-in-out ${isMenuOpen ? "transform translate-y-0" : "transform -translate-y-full"
+          } md:hidden`}
       >
         <div className="container mx-auto py-4 px-6">
           <div className="flex flex-col space-y-4">
@@ -145,8 +149,8 @@ export function Navbar() {
                 {item.name}
               </a>
             ))}
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               onClick={(e) => {
                 handleNavClick(e, "contact");
                 setIsMenuOpen(false);
