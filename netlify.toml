@@ -7,11 +7,11 @@ redirects = []
 [functions."*"]
 
 [build]
-base = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase" # Set this if your project is in a subdirectory
-publish = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase\\dist"
+base = "enjifano-portfolio-showcase"
+publish = "dist"
+command = "npm run build"
 publishOrigin = "ui"
 commandOrigin = "ui"
-command = "npm run build"
 
 [build.environment]
 
