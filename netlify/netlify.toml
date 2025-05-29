@@ -8,6 +8,7 @@ directory = "netlify/functions"
 [functions."*"]
 
 [build]
+base = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase"
 publish = "C:\\Users\\HP\\Desktop\\Web\\myPortifolio\\enjifano-portfolio-showcase\\dist"
 publishOrigin = "ui"
 commandOrigin = "ui"
