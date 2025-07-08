@@ -8,24 +8,31 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      position: "Product Manager at TechCorp",
+      name: "Naol Kecha",
+      position: "full stack developer",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100",
       text: "Working with Enjifano was a game-changer for our project. His Flutter expertise and attention to detail resulted in an app that exceeded our expectations. Highly recommended!",
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Mosisa Rundasa",
       position: "Startup Founder",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100",
       text: "Enjifano delivered our web platform ahead of schedule and with all the features we needed. His communication was excellent throughout the project, making the development process smooth and stress-free.",
     },
     {
       id: 3,
-      name: "Amina Hassan",
+      name: "Guluma Merga",
       position: "Digital Marketing Director",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100",
       text: "The e-commerce solution Enjifano created for us has significantly increased our online sales. His technical skills combined with business understanding made him an invaluable partner.",
+    },
+      {
+      id: 3,
+      name: "Gizachew Habtemariam",
+      position: "Co-Founder of Raba Technologies",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100",
+      text: "Enjifano is one of the exceptional developer and leader I have seen ever. His technical and leadership skills have been instrumental in the success of our projects at Raba Technologies. He consistently delivers high-quality work and inspires those around him.  I highly recommend him to any team looking for a skilled and dedicated developer.",
     },
   ];
 
