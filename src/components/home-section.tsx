@@ -54,7 +54,7 @@ export function HomeSection() {
           </h1>
           
           <div className="mb-8 text-lg md:text-xl text-gray-700 dark:text-gray-300">
-            <p className="mb-4">I transform ideas into exceptional software solutions with 2+ years of experience.</p>
+            <p className="mb-4">I transform ideas into exceptional software solutions with 3+ years of experience.</p>
             <p>Software Engineer / Flutter Developer / Full Stack Web Developer / Content Creator</p>
           </div>
 

@@ -14,38 +14,50 @@ import { Link } from "react-router-dom";
 
 export function ProjectsSection() {
   const projects = [
+   
     {
       id: 1,
+      title: "Pet Care App - Casablanca",
+      description:
+        "A mobile application from Casablanca, Morocco focused on pet care with enhanced UI, backend API integration, user authentication, and real-time notifications.",
+      image: "/images/projects/kasbark.jpg",
+      technologies: ["Flutter", "REST API", "Firebase", "Push Notifications"],
+      githubUrl: "https://github.com/enjifano/petcare-app",
+      liveUrl: "https://www.linkedin.com/company/kasbarks/about/",
+    },
+    {
+      id: 2,
+      title: "Raba Technologies Website",
+      description:
+        "Official website for Raba Technologies featuring modern design, responsive layout, and comprehensive company portfolio showcase.",
+      image: "images/projects/raba.png",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      githubUrl: "https://github.com/RabaTechnologies/RabaWebsite",
+      liveUrl: "https://www.rabatechnologies.com",
+    },
+     {
+      id: 3,
       title: "Health Care App",
       description:
         "A comprehensive healthcare platform with authentication, appointment booking, doctor profiles, content creation for patients and doctors, and real-time chat functionality.",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
-      technologies: ["Flutter", "Firebase", "Node.js", "Socket.io"],
+      technologies: ["Flutter", "Firebase", "BloC", "Socket.io"],
       githubUrl: "https://github.com/enjifano/healthcare-app",
       liveUrl: "https://healthcare-app-demo.netlify.app",
     },
     {
-      id: 2,
-      title: "Pet Care App - Casablanca",
-      description:
-        "A mobile application from Casablanca, Morocco focused on pet care with enhanced UI, backend API integration, user authentication, and real-time notifications.",
-      image: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1",
-      technologies: ["Flutter", "REST API", "Firebase", "Push Notifications"],
-      githubUrl: "https://github.com/enjifano/petcare-app",
-      liveUrl: "https://petcare-casablanca-demo.netlify.app",
-    },
-    {
-      id: 3,
-      title: "Raba Technologies Website",
-      description:
-        "Official website for Raba Technologies featuring modern design, responsive layout, and comprehensive company portfolio showcase.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/enjifano/raba-technologies",
-      liveUrl: "https://www.rabatechnologies.com",
-    },
-    {
       id: 4,
+      title: "Recipe System for Oromo Cultural Food",
+      description:
+        "A multilingual cultural recipe platform featuring zone-based food discovery, contributor system (text, audio, video), gamification, training request page, admin dashboard, secure user authentication and integrated chatbot for user support — designed to preserve and promote Oromo cuisine.",
+      image: "/images/projects/food.png",
+      technologies: ["React/Next.js", "Node.js", "MongoDB", "Express.js"],
+      githubUrl: "https://github.com/injifannoo/oromo-cultural-food",
+      liveUrl: "https://ecommerce-app-demo.oromoFood.app",
+    },
+    
+    {
+      id: 5,
       title: "E-Commerce Mobile App",
       description:
         "A full-featured e-commerce mobile application with product catalog, shopping cart, payment integration, and order tracking.",
@@ -54,8 +66,26 @@ export function ProjectsSection() {
       githubUrl: "https://github.com/enjifano/ecommerce-app",
       liveUrl: "https://ecommerce-app-demo.netlify.app",
     },
+     {
+    id: 6,
+      title: "Voice Assistant App",
+      description: "The Voice Assistant App is a Flutter-based application that integrates the capabilities of ChatGPT for natural language understanding and DALL-E for image generation. This app allows users to interact with a voice assistant, ask questions, and receive both text and image responses. With Features: Voice Interaction, Natural Language Processing, Image Generation, User-Friendly Interface.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      technologies: ["Flutter", "ChatGPT", "Dall-E", "Firebase"],
+      githubUrl: "https://github.com/injifannoo/voice_assistant_app",
+      liveUrl: "https://restaurant-booking-demo.netlify.app",
+    },
+     {
+      id: 7,
+      title: "Ethiopian Exit Exam Preparation Platform",
+      description:
+        "The Exit Exam Platform is designed to help students prepare effectively for national exit exams. It provides easy access to past exam questions prepared by the Ministry of Education, as well as model exams developed by First Generation Universities. The platform organizes previous years’ questions and answers in a user-friendly format, allowing students to study more efficiently. System administrators manage and upload well-structured question sets and solutions, ensuring that users have reliable resources at their fingertips. This tool is especially valuable for final-year students aiming to perform well in their exit assessments.",
+      image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+      technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      githubUrl: "https://github.com/injifannoo/ETHIOPIAN-EXIT-EXAM-",
+    },
     {
-      id: 5,
+      id: 8,
       title: "Portfolio Website",
       description:
         "A modern and responsive portfolio website built with React and Tailwind CSS, featuring animations and dark mode.",
@@ -65,17 +95,16 @@ export function ProjectsSection() {
       liveUrl: "https://enjifano.netlify.app",
     },
     {
-      id: 6,
+      id: 9,
       title: "Task Management Dashboard",
       description:
-        "A comprehensive task management web application with task assignment, progress tracking, and reporting features.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      technologies: ["React", "Node.js", "MySQL", "Chart.js"],
-      githubUrl: "https://github.com/enjifano/task-manager",
+        " A simple Task Management mobile application built with Flutter, implementing CRUD (Create, Read, Update, Delete) functionalities using the BLoC pattern and following Clean Architecture principles.",      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      technologies: ["Flutter", "Node.js", "BloC", "MongoDB", "Express.js"],
+      githubUrl: "https://github.com/injifannoo/flutter_task_management_crud_app",
       liveUrl: "https://task-manager-demo.netlify.app",
     },
     {
-      id: 7,
+      id: 10,
       title: "Social Media App",
       description:
         "A social media platform with user profiles, posts, comments, and real-time chat functionality.",
@@ -85,23 +114,23 @@ export function ProjectsSection() {
       liveUrl: "https://social-app-demo.netlify.app",
     },
     {
-      id: 8,
-      title: "Health and Fitness Tracker",
+      id: 11,
+      title: "Habit Track App",
       description:
-        "A mobile application for tracking health metrics, workout routines, and nutrition with data visualization.",
+        "A simple Habit Tracker app built using Flutter and Riverpod with Clean Architecture.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      technologies: ["Flutter", "Firebase", "HealthKit API"],
-      githubUrl: "https://github.com/enjifano/fitness-tracker",
+      technologies: ["Flutter", "Firebase", "Riverpod", "Clean Architecture"],
+      githubUrl: "https://github.com/injifannoo/Habit_Track_App",
       liveUrl: "https://fitness-tracker-demo.netlify.app",
     },
     {
-      id: 9,
-      title: "Restaurant Booking System",
+      id: 12,
+      title: "Role-Based Ticketing System",
       description:
         "An online reservation system for restaurants with table management, customer profiles, and email notifications.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      technologies: ["React", "Express.js", "MySQL", "Twilio API"],
-      githubUrl: "https://github.com/enjifano/restaurant-booking",
+      technologies: ["Tailwind", "HTML", "MySQL", "JavaScript"],
+      githubUrl: "https://github.com/injifannoo/Role-Based-Ticketing-System",
       liveUrl: "https://restaurant-booking-demo.netlify.app",
     },
   ];

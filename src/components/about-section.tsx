@@ -6,16 +6,19 @@ import { Card, CardContent } from "@/components/ui/card";
 export function AboutSection() {
   const skills = [
     { name: "Flutter Development", level: 95 },
-    { name: "React.js", level: 90 },
-    { name: "Node.js", level: 85 },
+    { name: "Frontend- React.js, Next.js, TypeScript, Tailwind CSS", level: 90 },
+    { name: "Backend- Node.js, Express.js, REST APIs, Firebase", level: 85 },
     { name: "UI/UX Design", level: 80 },
-    { name: "Database Management", level: 85 },
+    { name: "Database- MySQL, MongoDB", level: 85 },
     { name: "DevOps", level: 75 },
+    { name: "Programming Languages- Python,JavaScript,Dart", level: 85 },
+    { name: "Experienced With AI tools", level: 85 }
+
   ];
 
   const handleDownloadCV = () => {
     // In a real scenario, this would point to an actual PDF file
-    alert("CV download functionality would be implemented here with an actual PDF file");
+    window.open("https://drive.google.com/file/d/1lhvnvItAGRNu7l1AshPavPDQPAVc0e2q/view?usp=sharing", "_blank");
   };
 
   return (
@@ -40,21 +43,21 @@ export function AboutSection() {
             <div className="w-20 h-1 bg-primary mb-6"></div>
 
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              I'm Enjifano Tamiru, a passionate software engineer and full stack developer with expertise in Flutter mobile development. 
+              I'm Enjifano Tamiru, a passionate software engineer and full stack developer with expertise in Flutter mobile development.
               With several years of experience, I've worked on a diverse range of projects from mobile applications to complex web platforms.
             </p>
-            
+
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              My journey in tech started with a deep curiosity about how digital products are built. This curiosity evolved into a career where 
-              I now create intuitive, efficient solutions that solve real-world problems. As a content creator on 5GO YouTube, I share my knowledge 
-              and help others learn about software development.
+              My journey in tech started with a deep curiosity about how digital products are built. This curiosity evolved into a career where
+              I now create intuitive, efficient solutions that solve real-world problems. As a content creator on 5GO YouTube, I host experienced people and share my knowledge
+              and help others learn about technology, entrepreneurship,education, and business.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <Card>
                 <CardContent className="p-4 flex items-center">
                   <CheckCircle className="text-primary mr-2" size={20} />
-                  <span>4+ years of experience</span>
+                  <span>3+ years of experience</span>
                 </CardContent>
               </Card>
               <Card>
@@ -86,8 +89,8 @@ export function AboutSection() {
                     <span className="text-sm font-medium">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
-                    <div 
-                      className="skill-progress" 
+                    <div
+                      className="skill-progress"
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
