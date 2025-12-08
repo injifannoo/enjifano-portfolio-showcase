@@ -25,7 +25,16 @@ export function ProjectsSection() {
       githubUrl: "https://github.com/injifannoo/AI-based-Lending-Platform",
       liveUrl: "enjifano.netlify.app",
     },
-   
+    {
+      id: 1,
+      title: "Raba Technologies Website",
+      description:
+        "Official website for Raba Technologies featuring modern design, responsive layout, and comprehensive company portfolio showcase.",
+      image: "images/projects/raba.png",
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      githubUrl: "https://github.com/RabaTechnologies/RabaWebsite",
+      liveUrl: "https://www.rabatechnologies.com",
+    },
     {
       id: 2,
       title: "Pet Care App - Casablanca",
@@ -36,15 +45,16 @@ export function ProjectsSection() {
       githubUrl: "https://github.com/enjifano/petcare-app",
       liveUrl: "https://www.linkedin.com/company/kasbarks/about/",
     },
-    {
+   
+     {
       id: 3,
-      title: "Raba Technologies Website",
+      title: "AI based Lending Platform",
       description:
-        "Official website for Raba Technologies featuring modern design, responsive layout, and comprehensive company portfolio showcase.",
-      image: "images/projects/raba.png",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/RabaTechnologies/RabaWebsite",
-      liveUrl: "https://www.rabatechnologies.com",
+        "An AI-powered lending platform that automates loan evaluation, credit scoring, and approval for faster, smarter financing.",
+      image: "/images/projects/derash.png",
+      technologies: ["React", "Django", "postgreSql", "AI/ML"],
+      githubUrl: "https://github.com/injifannoo/AI-based-Lending-Platform",
+      liveUrl: "enjifano.netlify.app",
     },
      {
       id: 4,
