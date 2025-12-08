@@ -15,16 +15,6 @@ import { Link } from "react-router-dom";
 export function ProjectsSection() {
   const projects = [
 
-     {
-      id: 1,
-      title: "AI based Lending Platform",
-      description:
-        "An AI-powered lending platform that automates loan evaluation, credit scoring, and approval for faster, smarter financing.",
-      image: "/images/projects/derash.png",
-      technologies: ["React", "Django", "postgreSql", "AI/ML"],
-      githubUrl: "https://github.com/injifannoo/AI-based-Lending-Platform",
-      liveUrl: "enjifano.netlify.app",
-    },
     {
       id: 1,
       title: "Raba Technologies Website",
