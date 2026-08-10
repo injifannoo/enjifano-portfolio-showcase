@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Github, Linkedin, Instagram, Twitter } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -15,7 +14,8 @@ export function Footer() {
               Enjifano
             </Link>
             <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-              Software Engineer & Flutter Developer creating impactful digital solutions.
+              Full-Stack Software Engineer, creating impactful digital
+              solutions.
             </p>
             <div className="flex space-x-4 mt-6">
               <a
@@ -61,22 +61,34 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <Link
+                  to="/"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <Link
+                  to="/about"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <Link
+                  to="/projects"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <Link
+                  to="/services"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Services
                 </Link>
               </li>
@@ -87,17 +99,26 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/blog" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <Link
+                  to="/blog"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors">
+                <a
+                  href="#"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
+                >
                   Terms of Service
                 </a>
               </li>
@@ -118,7 +139,9 @@ export function Footer() {
               </li>
             </ul>
             <div className="mt-4 flex items-center space-x-2">
-              <span className="text-sm text-gray-600 dark:text-gray-400">Theme:</span>
+              <span className="text-sm text-gray-600 dark:text-gray-400">
+                Theme:
+              </span>
               <ThemeToggle />
             </div>
           </div>
@@ -129,7 +152,7 @@ export function Footer() {
             &copy; {year} Enjifano Tamiru. All rights reserved.
           </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 md:mt-0">
-            Developed with Enjifano Tamiru
+            Developed by Enjifano Tamiru
           </p>
         </div>
       </div>

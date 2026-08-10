@@ -1,24 +1,53 @@
-
 import { Download, CheckCircle, Code } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export function AboutSection() {
   const skills = [
-    { name: "Flutter Development", level: 95 },
-    { name: "Frontend- React.js, Next.js, TypeScript, Tailwind CSS", level: 90 },
-    { name: "Backend- Node.js, Express.js, REST APIs, Firebase", level: 85 },
-    { name: "UI/UX Design", level: 80 },
-    { name: "Database- MySQL, MongoDB", level: 85 },
-    { name: "DevOps", level: 75 },
-    { name: "Programming Languages- Python,JavaScript,Dart", level: 85 },
-    { name: "Experienced With AI tools", level: 85 }
-
+    {
+      name: "Frontend Development",
+      technologies: "React.js, Next.js, TypeScript, Tailwind CSS",
+      level: 90,
+    },
+    {
+      name: "Backend Development",
+      technologies:
+        "Python, Django REST Framework, Node.js, Express.js, REST APIs",
+      level: 85,
+    },
+    {
+      name: "Mobile Development",
+      technologies: "Flutter, Dart, Firebase",
+      level: 85,
+    },
+    {
+      name: "Database & Data Management",
+      technologies: "PostgreSQL, MySQL, MongoDB, Database Design",
+      level: 85,
+    },
+    {
+      name: "Cloud & DevOps",
+      technologies: "Docker, CI/CD, AWS, Server Deployment",
+      level: 75,
+    },
+    {
+      name: "Programming Languages",
+      technologies: "Python, JavaScript, TypeScript, Dart, Java",
+      level: 85,
+    },
+    {
+      name: "AI Engineering",
+      technologies: "LLM APIs, Generative AI, AI Agents, Prompt Engineering",
+      level: 75,
+    },
   ];
 
   const handleDownloadCV = () => {
     // In a real scenario, this would point to an actual PDF file
-    window.open("https://drive.google.com/file/d/1lhvnvItAGRNu7l1AshPavPDQPAVc0e2q/view?usp=sharing", "_blank");
+    window.open(
+      "https://drive.google.com/file/d/1-wF1U2G0Q1RlAu25_qKsYJh9OUsCeXas/view?usp=sharing",
+      "_blank",
+    );
   };
 
   return (
@@ -42,15 +71,32 @@ export function AboutSection() {
             <h2 className="text-3xl font-bold mb-2">About Me</h2>
             <div className="w-20 h-1 bg-primary mb-6"></div>
 
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              I'm Enjifano Tamiru, a passionate software engineer and full stack developer with expertise in Flutter mobile development.
-              With several years of experience, I've worked on a diverse range of projects from mobile applications to complex web platforms.
-            </p>
-
-            <p className="text-gray-700 dark:text-gray-300 mb-6">
-              My journey in tech started with a deep curiosity about how digital products are built. This curiosity evolved into a career where
-              I now create intuitive, efficient solutions that solve real-world problems. As a content creator on 5GO YouTube, I host experienced people and share my knowledge
-              and help others learn about technology, entrepreneurship,education, and business.
+            <p className="text-gray-700 dark:text-gray-300 text-italic mb-6">
+              I’m a Full-Stack Software Engineer with
+              <span className="font-semibold text-foreground">
+                {" "}
+                3+ years of experience{" "}
+              </span>
+              building web applications, mobile apps, REST APIs, and backend
+              systems.
+              <br />
+              <br />I specialize in
+              <span className="font-semibold text-primary">
+                {" "}
+                React, Next.js, TypeScript, Python, Django, Node.js, and
+                Flutter,{" "}
+              </span>
+              with experience in database design, API development, and deploying
+              scalable software solutions.
+              <br />
+              <br />I hold a BSc in Computer Science from Addis Ababa University
+              and have worked on projects across web development, mobile
+              applications, and digital platforms. I enjoy solving complex
+              problems, learning emerging technologies, and building reliable
+              software that creates real-world impact.
+              <br />
+              <br />I also help others learn about
+              technology,entrepreneurship,education, and business.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -86,7 +132,6 @@ export function AboutSection() {
                 <div key={skill.name}>
                   <div className="flex justify-between mb-1">
                     <span className="text-sm font-medium">{skill.name}</span>
-                    <span className="text-sm font-medium">{skill.level}%</span>
                   </div>
                   <div className="skill-bar">
                     <div
@@ -94,12 +139,15 @@ export function AboutSection() {
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
+                  <div className="text-sm text-gray-500">
+                    {skill.technologies}
+                  </div>
                 </div>
               ))}
             </div>
 
             <Button className="btn-shine" onClick={handleDownloadCV}>
-              <Download className="mr-2 h-4 w-4" /> Download CV
+              <Download className="mr-2 h-4 w-4" /> View my Resume
             </Button>
           </div>
         </div>
